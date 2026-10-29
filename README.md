@@ -1,0 +1,2 @@
+# Sync
+Implementação de sincronização 
