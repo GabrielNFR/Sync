@@ -1,0 +1,141 @@
+Script started on 2026-10-29 17:25:51-03:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="134" LINES="14"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ pwd
+[?2004l/home/skickle/OS/Sync
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ date
+[?2004lThu Oct 29 17:26:04 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ whoami
+[?2004lskickle
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ make clean && make
+[?2004lrm -f sync_car sync_car.o sync_car-runner.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car.c -o sync_car.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car-runner.c -o sync_car-runner.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -o sync_car sync_car.o sync_car-runner.o -pthread
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   sync_car.c[m
+	[31mmodified:   sync_car.h[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mevidencias.log[m
+	[31mgnfr.md[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git diff
+[?2004l[?1h=[1mdiff --git a/sync_car.c b/sync_car.c[m[m
+[1mindex e784c43..ee47e22 100644[m[m
+[1m--- a/sync_car.c[m[m
+[1m+++ b/sync_car.c[m[m
+[36m@@ -1,5 +1,16 @@[m[m
+[31m-#include <stdio.h>[m[m
+[32m+[m[32m#include "sync_car.h"[m[m
+[32m+[m[32m#include <time.h>[m[m
+ [m[m
+[31m-int main(void) {[m[m
+[31m-    printf(".6");[m[m
+[31m-}[m[m
+\ No newline at end of file[m[m
+:[K[K:[K[K:[K[K[32m+[m[32mvoid station_init(struct station *station) {[m[m
+:[K[K:[K[K...skipping...
+[1mindex e784c43..ee47e22 100644[m[m
+[1m--- a/sync_car.c[m[m
+[1m+++ b/sync_car.c[m[m
+[36m@@ -1,5 +1,16 @@[m[m
+[31m-#include <stdio.h>[m[m
+[32m+[m[32m#include "sync_car.h"[m[m
+[32m+[m[32m#include <time.h>[m[m
+ [m[m
+[31m-int main(void) {[m[m
+[31m-    printf(".6");[m[m
+[31m-}[m[m
+\ No newline at end of file[m[m
+[32m+[m[32mvoid station_init(struct station *station) {[m[m
+:[K[K[?1l>
+[1]+  Stopped                 git diff
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git add -A
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git --staged
+[?2004lunknown option: --staged
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+Script started on 2026-10-29 17:24:13-03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="134" LINES="14"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ make clean && make
+[?2004lrm -f sync_car sync_car.o sync_car-runner.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car.c -o sync_car.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car-runner.c -o sync_car-runner.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -o sync_car sync_car.o sync_car-runner.o -pthread
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ scripot[K[Kt -f -a evidencias.log 
+[?2004lScript started, output log file is 'evidencias.log'.
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ pwd
+[?2004l/home/skickle/OS/Sync
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ date
+[?2004lThu Oct 29 17:26:04 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ whoami
+[?2004lskickle
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ make clean && make
+[?2004lrm -f sync_car sync_car.o sync_car-runner.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car.c -o sync_car.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car-runner.c -o sync_car-runner.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -o sync_car sync_car.o sync_car-runner.o -pthread
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   sync_car.c[m
+	[31mmodified:   sync_car.h[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mevidencias.log[m
+	[31mgnfr.md[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git diff
+[?2004l[?1h=[1mdiff --git a/sync_car.c b/sync_car.c[m[m
+[1mindex e784c43..ee47e22 100644[m[m
+[1m--- a/sync_car.c[m[m
+[1m+++ b/sync_car.c[m[m
+[36m@@ -1,5 +1,16 @@[m[m
+[31m-#include <stdio.h>[m[m
+[32m+[m[32m#include "sync_car.h"[m[m
+[32m+[m[32m#include <time.h>[m[m
+ [m[m
+[31m-int main(void) {[m[m
+[31m-    printf(".6");[m[m
+[31m-}[m[m
+\ No newline at end of file[m[m
+:[K[K:[K[K:[K[K[32m+[m[32mvoid station_init(struct station *station) {[m[m
+:[K[K:[K[K...skipping...
+[1mindex e784c43..ee47e22 100644[m[m
+[1m--- a/sync_car.c[m[m
+[1m+++ b/sync_car.c[m[m
+[36m@@ -1,5 +1,16 @@[m[m
+[31m-#include <stdio.h>[m[m
+[32m+[m[32m#include "sync_car.h"[m[m
+[32m+[m[32m#include <time.h>[m[m
+ [m[m
+[31m-int main(void) {[m[m
+[31m-    printf(".6");[m[m
+[31m-}[m[m
+\ No newline at end of file[m[m
+[32m+[m[32mvoid station_init(struct station *station) {[m[m
+:[K[K[?1l>
+[1]+  Stopped                 git diff
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git add -A
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git --staged
+[?2004lunknown option: --staged
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envv[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ [K]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ 
