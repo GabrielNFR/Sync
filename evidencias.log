@@ -1,17 +1,22 @@
 Script started on 2026-10-29 17:25:51-03:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="134" LINES="14"]
 [?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ pwd
-[?2004l/home/skickle/OS/Sync
+[?2004l
+/home/skickle/OS/Sync
 [?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ date
-[?2004lThu Oct 29 17:26:04 -03 2026
+[?2004l
+Thu Oct 29 17:26:04 -03 2026
 [?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ whoami
-[?2004lskickle
+[?2004l
+skickle
 [?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ make clean && make
-[?2004lrm -f sync_car sync_car.o sync_car-runner.o
+[?2004l
+rm -f sync_car sync_car.o sync_car-runner.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car.c -o sync_car.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car-runner.c -o sync_car-runner.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -o sync_car sync_car.o sync_car-runner.o -pthread
 [?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git status
-[?2004lOn branch main
+[?2004l
+On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes not staged for commit:
@@ -27,7 +32,9 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 [?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git diff
-[?2004l[?1h=[1mdiff --git a/sync_car.c b/sync_car.c[m[m
+[?2004l
+[?1h=
+[1mdiff --git a/sync_car.c b/sync_car.c[m[m
 [1mindex e784c43..ee47e22 100644[m[m
 [1m--- a/sync_car.c[m[m
 [1m+++ b/sync_car.c[m[m
@@ -40,8 +47,13 @@ no changes added to commit (use "git add" and/or "git commit -a")
 [31m-    printf(".6");[m[m
 [31m-}[m[m
 \ No newline at end of file[m[m
-:[K[K:[K[K:[K[K[32m+[m[32mvoid station_init(struct station *station) {[m[m
-:[K[K:[K[K...skipping...
+:[K
+[K:[K
+[K:[K
+[K[32m+[m[32mvoid station_init(struct station *station) {[m[m
+:[K
+[K:[K
+[K...skipping...
 [1mindex e784c43..ee47e22 100644[m[m
 [1m--- a/sync_car.c[m[m
 [1m+++ b/sync_car.c[m[m
@@ -55,11 +67,14 @@ no changes added to commit (use "git add" and/or "git commit -a")
 [31m-}[m[m
 \ No newline at end of file[m[m
 [32m+[m[32mvoid station_init(struct station *station) {[m[m
-:[K[K[?1l>
+:[K
+[K[?1l>
 [1]+  Stopped                 git diff
 [?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git add -A
-[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git --staged
-[?2004lunknown option: --staged
+[?2004l
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git --staged
+[?2004l
+unknown option: --staged
 usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
            [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
            [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
@@ -67,25 +82,32 @@ usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
            [--config-env=<name>=<envvar>] <command> [<args>]
 Script started on 2026-10-29 17:24:13-03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="134" LINES="14"]
 [?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ make clean && make
-[?2004lrm -f sync_car sync_car.o sync_car-runner.o
+[?2004l
+rm -f sync_car sync_car.o sync_car-runner.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car.c -o sync_car.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car-runner.c -o sync_car-runner.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -o sync_car sync_car.o sync_car-runner.o -pthread
 [?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ scripot[K[Kt -f -a evidencias.log 
-[?2004lScript started, output log file is 'evidencias.log'.
+[?2004l
+Script started, output log file is 'evidencias.log'.
 [?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ pwd
-[?2004l/home/skickle/OS/Sync
+[?2004l
+/home/skickle/OS/Sync
 [?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ date
-[?2004lThu Oct 29 17:26:04 -03 2026
+[?2004l
+Thu Oct 29 17:26:04 -03 2026
 [?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ whoami
-[?2004lskickle
+[?2004l
+skickle
 [?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ make clean && make
-[?2004lrm -f sync_car sync_car.o sync_car-runner.o
+[?2004l
+rm -f sync_car sync_car.o sync_car-runner.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car.c -o sync_car.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car-runner.c -o sync_car-runner.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -o sync_car sync_car.o sync_car-runner.o -pthread
 [?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git status
-[?2004lOn branch main
+[?2004l
+On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes not staged for commit:
@@ -101,7 +123,9 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 [?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git diff
-[?2004l[?1h=[1mdiff --git a/sync_car.c b/sync_car.c[m[m
+[?2004l
+[?1h=
+[1mdiff --git a/sync_car.c b/sync_car.c[m[m
 [1mindex e784c43..ee47e22 100644[m[m
 [1m--- a/sync_car.c[m[m
 [1m+++ b/sync_car.c[m[m
@@ -114,8 +138,13 @@ no changes added to commit (use "git add" and/or "git commit -a")
 [31m-    printf(".6");[m[m
 [31m-}[m[m
 \ No newline at end of file[m[m
-:[K[K:[K[K:[K[K[32m+[m[32mvoid station_init(struct station *station) {[m[m
-:[K[K:[K[K...skipping...
+:[K
+[K:[K
+[K:[K
+[K[32m+[m[32mvoid station_init(struct station *station) {[m[m
+:[K
+[K:[K
+[K...skipping...
 [1mindex e784c43..ee47e22 100644[m[m
 [1m--- a/sync_car.c[m[m
 [1m+++ b/sync_car.c[m[m
@@ -129,13 +158,120 @@ no changes added to commit (use "git add" and/or "git commit -a")
 [31m-}[m[m
 \ No newline at end of file[m[m
 [32m+[m[32mvoid station_init(struct station *station) {[m[m
-:[K[K[?1l>
+:[K
+[K[?1l>
 [1]+  Stopped                 git diff
 [?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git add -A
-[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git --staged
-[?2004lunknown option: --staged
+[?2004l
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ git --staged
+[?2004l
+unknown option: --staged
 usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
            [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
            [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
            [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           [--config-env=<name>=<envv[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ [K]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ 
+           [--config-env=<name>=<envv[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ 
+Script started on 2026-10-29 20:50:29-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="134" LINES="14"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ date
+[?2004l
+Thu Oct 29 20:50:32 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ pwd
+[?2004l
+/home/skickle/OS/Sync
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ whoami
+[?2004l
+skickle
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ make
+[?2004l
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car.c -o sync_car.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -o sync_car sync_car.o sync_car-runner.o -pthread
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ mak[K[K[Kmake clean && make
+[?2004l
+rm -f sync_car sync_car.o sync_car-runner.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car.c -o sync_car.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car-runner.c -o sync_car-runner.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -o sync_car sync_car.o sync_car-runner.o -pthread
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ ./sync_car
+[?2004l
+car entering station with 35 free seats
+car departed station with 35 new passenger(s) (expected 35)
+car entering station with 17 free seats
+car departed station with 17 new passenger(s) (expected 17)
+car entering station with 7 free seats
+car departed station with 7 new passenger(s) (expected 7)
+car entering station with 29 free seats
+car departed station with 29 new passenger(s) (expected 29)
+car entering station with 42 free seats
+car departed station with 12 new passenger(s) (expected 12)
+Looks good!
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ [?2004l
+
+exit
+Script started on 2026-10-29 21:45:50-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="134" LINES="14"]
+[7mfor i in $(seq 30); do ./sync_car >/dev/null || { echo "falhou na rodada $i"; break; }; done[27m
+[7mecho "fim do stress"[27m
+[7mvalgrind --tool=helgrind ./sync_car 2>&1 | tail -30[27m
+[7mexit[27m[A[A[A]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ for i in $(seq 30); do ./sync_car >/dev/null || { echo "falhou na rodada $i"; break; }; done
+echo "fim do stress"
+valgrind --tool=helgrind ./sync_car 2>&1 | tail -30
+exit
+[?2004lfim do stress
+==9545==    by 0x109519: main (sync_car-runner.c:111)
+==9545== 
+==9545== ----------------------------------------------------------------
+==9545== 
+==9545== Possible data race during write of size 4 at 0x10C040 by thread #103
+==9545== Locks held: none
+==9545==    at 0x109A55: load_car_thread (sync_car-runner.c:40)
+==9545==    by 0x4854B7A: ??? (in /usr/libexec/valgrind/vgpreload_helgrind-amd64-linux.so)
+==9545==    by 0x4909B83: start_thread (pthread_create.c:447)
+==9545==    by 0x4996CC3: clone (clone.S:100)
+==9545== 
+==9545== This conflicts with a previous read of size 4 by thread #1
+==9545== Locks held: none
+==9545==    at 0x109538: main (sync_car-runner.c:122)
+==9545==  Address 0x10c040 is 0 bytes inside data symbol "load_car_returned"
+==9545== 
+car entering station with 47 free seats
+car departed station with 47 new passenger(s) (expected 47)
+car entering station with 36 free seats
+car departed station with 36 new passenger(s) (expected 36)
+car entering station with 7 free seats
+car departed station with 7 new passenger(s) (expected 7)
+car entering station with 48 free seats
+car departed station with 10 new passenger(s) (expected 10)
+Looks good!
+==9545== 
+==9545== Use --history-level=approx or =none to gain increased speed, at
+==9545== the cost of reduced accuracy of conflicting-access information
+==9545== For lists of detected and suppressed errors, rerun with: -s
+==9545== ERROR SUMMARY: 76 errors from 4 contexts (suppressed: 2414 from 44)
+exit
+There are stopped jobs.
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ [?2004l
+exit
+Script started on 2026-10-29 22:09:16-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="134" LINES="14"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ date
+[?2004lThu Oct 29 22:09:22 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ make cçean [K[K[K[K[Klean  [K[K
+[?2004lrm -f sync_car sync_car.o sync_car-runner.o
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ make 
+[?2004lgcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car.c -o sync_car.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c sync_car-runner.c -o sync_car-runner.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -o sync_car sync_car.o sync_car-runner.o -pthread
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ ./synccar[K[K[K[K[K[K[K[K[K[7m./sync_car[27m./sync_car
+[?2004lcar entering station with 26 free seats
+car departed station with 26 new passenger(s) (expected 26)
+car entering station with 40 free seats
+car departed station with 40 new passenger(s) (expected 40)
+car entering station with 7 free seats
+car departed station with 7 new passenger(s) (expected 7)
+car entering station with 13 free seats
+car departed station with 13 new passenger(s) (expected 13)
+car entering station with 48 free seats
+car departed station with 14 new passenger(s) (expected 14)
+Looks good!
+[?2004h]0;skickle@ROADLESS1: ~/OS/Sync[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Sync[00m$ exit
+[?2004lexit
+
+Script done on 2026-10-29 22:10:09-03:00 [COMMAND_EXIT_CODE="0"]

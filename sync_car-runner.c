@@ -173,5 +173,34 @@ int main(void)
 
 		retorno = 1;
 	}
+
+	/* Caso invalido adicionado por mim: station_load_car com capacidade
+	 * negativa. Nao ha assento a oferecer, entao a chamada deve retornar de
+	 * imediato e nenhum passageiro pode embarcar. */
+	{
+		pthread_t invalid_tid[3];
+
+		for (i = 0; i < 3; i++) {
+			int ret = pthread_create(&invalid_tid[i], NULL,
+						 passenger_thread, &station);
+			if (ret != 0) {
+				perror("pthread_create");
+				exit(1);
+			}
+		}
+
+		usleep(10000);
+
+		_alarm(2, "station_load_car com count negativo nao retornou");
+		station_load_car(&station, -5);
+		_alarm(0, NULL);
+
+		if (threads_completed > 0) {
+			fprintf(stderr, "Error: passengers boarded a car with "
+					"negative capacity\n");
+			exit(1);
+		}
+	}
+
 	return retorno;
 }
