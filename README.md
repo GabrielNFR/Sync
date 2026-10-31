@@ -69,20 +69,23 @@ make
 
 A saída esperada mostra cada vagão entrando com um número de assentos, saindo com o número de passageiros que embarcaram, e termina com `Looks good!`. Qualquer linha com asterisco indica divergência entre o esperado e o realizado.
 
+O `sync_car-runner.c` é o teste fornecido e não acompanha a entrega. Ele precisa estar no mesmo diretório apenas para a compilação local, porque é ele que contém a `main` usada pelo `Makefile`.
+
 ## Arquivos
 
 - `sync_car.h`: define `struct station` e declara as quatro funções. O tipo fica completo no header porque o runner aloca a estação na pilha da `main`.
 - `sync_car.c`: implementação das quatro funções.
-- `sync_car-runner.c`: teste fornecido no exercício, com um bloco acrescentado no fim para o caso inválido de capacidade negativa.
 - `Makefile`: compila com `-std=gnu11 -Wall -Wextra -Werror -pthread` e gera o executável `sync_car`.
-- `evidencias.log`: registro de terminal das sessões de trabalho.
-- `gnfr.md`: relatório do trabalho.
+- `README.md`: este arquivo.
+- `gnfr.pdf`: relatório do trabalho.
+- `sync_car-runner.c`: teste fornecido no exercício. Ele não é um entregável; é necessário apenas localmente, para gerar o executável de teste com `make`, pois é ele que contém a `main`. No ambiente local, esse runner foi complementado com um caso de capacidade negativa.
+- `evidencias.log`: registro local das sessões de teste, usado como evidência no relatório.
 
 ## Testes
 
-O runner cria 100 threads de passageiro e faz vários vagões passarem, com número de assentos sorteado entre 0 e 49. Ele verifica o caso de vagão vazio sem ninguém esperando, vagão sem assento com muita gente esperando, e vagão com mais assentos do que passageiros.
+Os testes usam o `sync_car-runner.c` fornecido, que não acompanha a entrega. Ele cria 100 threads de passageiro e faz vários vagões passarem, com número de assentos sorteado entre 0 e 49. Verifica o caso de vagão vazio sem ninguém esperando, vagão sem assento com muita gente esperando e vagão com mais assentos do que passageiros. No ambiente local, o runner também foi complementado com um caso de capacidade negativa.
 
-Além dele, a implementação foi executada 30 vezes seguidas para procurar falha intermitente e uma vez sob o helgrind. O helgrind reportou condições de corrida nos indicadores de controle do próprio runner, entre eles `load_car_returned`, que é declarado `volatile` mas não é atômico. O recorte de saída registrado no log mostra apenas um desses contextos, os outros três aparecem no resumo do valgrind mas não foram capturados.
+Além dele, a implementação foi executada 60 vezes seguidas para procurar falha intermitente, mais 30 vezes com o processo fixado em um único núcleo (`taskset -c 0`), e uma vez sob o helgrind. O helgrind reportou quatro contextos de corrida, todos envolvendo `load_car_returned`, um indicador de controle do próprio runner: ele é declarado `volatile`, mas as leituras e escritas não são atômicas. Nenhuma ocorrência foi apontada em `sync_car.c`. O recorte de saída registrado no log mostra apenas um desses contextos; os outros três aparecem no resumo do valgrind.
 
 ## Decisões e limites
 
